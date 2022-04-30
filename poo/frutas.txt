@@ -1,0 +1,12 @@
+Banana
+1
+Nanica
+3.99
+Abacaxi
+1
+10
+3.99
+Laranja
+1
+Nacional
+3.99
