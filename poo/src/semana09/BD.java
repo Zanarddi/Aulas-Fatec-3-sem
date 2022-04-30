@@ -30,7 +30,6 @@ public class BD {
 			con = DriverManager.getConnection(URL, LOGIN, SENHA);
 			System.out.println("Sucesso!!");
 			return true;
-
 		} catch (ClassNotFoundException erro) {
 			System.out.println("Driver não encontrado!!");
 			return false;
@@ -46,11 +45,28 @@ public class BD {
 	 * @return
 	 */
 	public void close() {
-
+		try {
+			if (rs != null)
+				rs.close();
+		} catch (SQLException erro) {
+		}
+		try {
+			if (st != null)
+				st.close();
+		} catch (SQLException erro) {
+		}
+		try {
+			if (con != null) {
+				con.close();
+				System.out.println("Desconectou!!");
+			}
+		} catch (SQLException erro) {
+		}
 	}
 
 	public static void main(String[] args) {
 		BD bd = new BD();
 		bd.getConnection();
+		bd.close();
 	}
 }
