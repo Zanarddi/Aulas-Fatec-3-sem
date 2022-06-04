@@ -14,7 +14,7 @@ public class BD {
 
 	public final String DRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriver"; // driver de conexão ao banco
 	public final String BANCO = "java"; // nome do banco
-	public final String URL = "jdbc:sqlserver://192.168.97.42:1433;databasename=" + BANCO; // URL para se conectar ao
+	public final String URL = "jdbc:sqlserver://localhost:1433;databasename=" + BANCO; // URL para se conectar ao
 																							// banco, usar
 																							// localhost:1433 caso
 																							// queira usar o seu proprio
