@@ -37,23 +37,20 @@ public class Texto {
 		return array;
 	}
 
-	public static String[] gerarCSV(List<String> linhas, String csvFile) {
+	public static String gerarCSV(List<String> linhas, String csvFile) {
+		int c = 0;
 		try {
 			PrintWriter pw = new PrintWriter(csvFile);
-			int c = 0;
+			
 			
 			for(String s : linhas) {
-				pw.write(s);
+				pw.write(s + "\n");
 				c++;
 			}
-			
-			
+			pw.close();
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("ERRO: " + e);
 		}
-		
-		
-		
-		return null;
+		return c + " linhas inseridas";
 	}
 }
